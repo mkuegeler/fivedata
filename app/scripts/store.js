@@ -1,0 +1,1 @@
+Fivedata.ApplicationAdapter = DS.FixtureAdapter;
