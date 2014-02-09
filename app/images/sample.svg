@@ -5,90 +5,24 @@
 <style type="text/css" >
 <![CDATA[
 
-
-
 /* Core style definition of node elements */
 rect.Box { fill:none; stroke:#0000ff; stroke-width:0.5 }
 circle.Node { stroke:#000000; stroke-width:1; fill:#e8e8e8; fill:url(#nodeRadialGradient_A) }       
 line.Arrow  { stroke:#000000; stroke-width:1 }
 polygon.Arrow { fill:#000000 }
-
-
-/* node variants in groups  */
-
-/* ------------------------------------   */
-/* pattern_0 */
-
-g.pattern_0-box     { visibility: visible }
-
-g.pattern_0-ahead_1_a { visibility: visible }
-g.pattern_0-ahead_1_b { visibility: visible }
-g.pattern_0-arrow_1 { visibility: visible }
-
-g.pattern_0-ahead_2 { visibility: visible }
-g.pattern_0-arrow_2 { visibility: visible }
-
-g.pattern_0-ahead_3 { visibility: visible }
-g.pattern_0-arrow_3 { visibility: visible }
-
-g.pattern_0-ahead_4 { visibility: visible }
-g.pattern_0-arrow_4 { visibility: visible }
-
-g.pattern_0-ahead_5 { visibility: visible }
-g.pattern_0-arrow_5 { visibility: visible }
-
-g.pattern_0-ahead_6 { visibility: visible }
-g.pattern_0-arrow_6 { visibility: visible }
-
-g.pattern_0-ahead_7 { visibility: visible }
-g.pattern_0-arrow_7 { visibility: visible }
-
-g.pattern_0-ahead_8 { visibility: visible }
-g.pattern_0-arrow_8 { visibility: visible }
-
-g.pattern_0-node    { visibility: visible }
-
-/* ------------------------------------   */
-
-/* ------------------------------------   */
-/* pattern_1 */
-
-g.pattern_1-box     { visibility: visible }
-
-g.pattern_1-ahead_1 { visibility: hidden }
-g.pattern_1-arrow_1 { visibility: hidden }
-
-g.pattern_1-ahead_2 { visibility: hidden }
-g.pattern_1-arrow_2 { visibility: hidden }
-
-g.pattern_1-ahead_3 { visibility: hidden }
-g.pattern_1-arrow_3 { visibility: hidden }
-
-g.pattern_1-ahead_4 { visibility: hidden }
-g.pattern_1-arrow_4 { visibility: hidden }
-
-g.pattern_1-ahead_5 { visibility: hidden }
-g.pattern_1-arrow_5 { visibility: hidden }
-
-g.pattern_1-ahead_6 { visibility: hidden }
-g.pattern_1-arrow_6 { visibility: hidden }
-
-g.pattern_1-ahead_7 { visibility: visible }
-g.pattern_1-arrow_7 { visibility: visible }
-
-g.pattern_1-ahead_8 { visibility: hidden }
-g.pattern_1-arrow_8 { visibility: hidden }
-
-g.pattern_1-node    { visibility: visible }
-
-/* ------------------------------------   */
-
+text.Node {fill: #000000; stroke: none; font-size: 16px; text-anchor: middle}
+text.Relationship {fill: #000000; stroke: none; font-size: 6px; text-anchor: middle}
 
 ]]>
 </style>
 
   
 <defs>
+
+
+<path id="ArrowPath" d="M15,1 L15,100"/>
+
+
 
 <radialGradient id="nodeRadialGradient_A"
            fx="5%" fy="5%" r="65%"
@@ -108,11 +42,13 @@ g.pattern_1-node    { visibility: visible }
 </symbol>
 
 
-<!-- //// pattern_0 ////////////////////////////////////////////////////////////////////////////// -->
-   
-<symbol id="pattern_0">
-       
-<!-- All arrows and node positions with boundary box-->
+</defs>
+  
+<g id="graph" transform="translate(0,0) scale(2)">
+
+
+<!-- ################################# pattern_0_1 ########################################### -->   
+<g id="pattern_0_1" transform="translate(0,0)">   
 
 <!-- boundary box-->
 <g id="pattern_0-box" style="visibility:visible"><rect x="0" y="0" width="200" height="200" class="Box"/></g>
@@ -122,12 +58,20 @@ g.pattern_1-node    { visibility: visible }
     <use xlink:href="#arrow_line" style="visibility:visible"/>
     <use xlink:href="#arrow_head" style="visibility:visible"/>
     <use xlink:href="#arrow_head" style="visibility:visible" transform="translate(10,50) rotate(180)"/>
+    
+     <text x="25" y="0" class="Relationship" transform="translate(35,50) rotate(180)" onclick="alert('Relationship 1')">
+      <textPath xlink:href="#ArrowPath">Relationship 1</textPath>
+    </text>
 </g>
 
 <g id="pattern_0-arrow_2" transform="translate(197,-4) rotate(45)" >
     <use xlink:href="#arrow_line" style="visibility:visible" />
     <use xlink:href="#arrow_head" style="visibility:visible" />
     <use xlink:href="#arrow_head" style="visibility:visible" transform="translate(10,92) rotate(180)"/>
+    
+     <text x="45" y="0" class="Relationship" transform="translate(35,95) rotate(180)" onclick="alert('Relationship 2')">
+      <textPath xlink:href="#ArrowPath">Relationship 2</textPath>
+    </text>
     
 </g>
          
@@ -136,12 +80,20 @@ g.pattern_1-node    { visibility: visible }
     <use xlink:href="#arrow_head" style="visibility:visible" />    
     <use xlink:href="#arrow_head" style="visibility:visible" transform="translate(10,50) rotate(180)"/>
     
+     <text x="25" y="0" class="Relationship" transform="translate(35,50) rotate(180)" onclick="alert('Relationship 3')">
+      <textPath xlink:href="#ArrowPath">Relationship 3</textPath>
+    </text>
+    
 </g>
 
 <g id="pattern_0-arrow_4" transform="translate(204,197) rotate(135)" >
     <use xlink:href="#arrow_line" style="visibility:visible" />
     <use xlink:href="#arrow_head" style="visibility:visible" />
     <use xlink:href="#arrow_head" style="visibility:visible" transform="translate(10,92) rotate(180)"/>
+    
+     <text x="45" y="0" class="Relationship" transform="translate(35,95) rotate(180)" onclick="alert('Relationship 4')">
+      <textPath xlink:href="#ArrowPath">Relationship 4</textPath>
+    </text>
 
 </g>
          
@@ -149,6 +101,10 @@ g.pattern_1-node    { visibility: visible }
     <use xlink:href="#arrow_line" style="visibility:visible" />
     <use xlink:href="#arrow_head" style="visibility:visible" />
     <use xlink:href="#arrow_head" style="visibility:visible" transform="translate(10,50) rotate(180)"/>
+    
+     <text x="25" y="0" class="Relationship" transform="translate(35,50) rotate(180)" onclick="alert('Relationship 5')">
+      <textPath xlink:href="#ArrowPath">Relationship 5</textPath>
+    </text>
    
 </g>
 
@@ -156,6 +112,10 @@ g.pattern_1-node    { visibility: visible }
     <use xlink:href="#arrow_line" style="visibility:visible" />
     <use xlink:href="#arrow_head" style="visibility:visible" />
     <use xlink:href="#arrow_head" style="visibility:visible" transform="translate(10,92) rotate(180)"/>
+    
+     <text x="45" y="0" class="Relationship" onclick="alert('Relationship 6')">
+      <textPath xlink:href="#ArrowPath">Relationship 6</textPath>
+    </text>
 
 </g>
          
@@ -163,36 +123,35 @@ g.pattern_1-node    { visibility: visible }
     <use xlink:href="#arrow_line" style="visibility:visible" />
     <use xlink:href="#arrow_head" style="visibility:visible" />
     <use xlink:href="#arrow_head" style="visibility:visible" transform="translate(10,50) rotate(180)"/>
+    
+     <text x="25" y="0" class="Relationship" onclick="alert('Relationship 7')">
+      <textPath xlink:href="#ArrowPath">Relationship 7</textPath>
+    </text>
 
 </g>
        
-<g class="pattern_0-arrow_8" transform="translate(-4,3) rotate(315)" >
+<g class="pattern_0-arrow_8" transform="translate(-4,3) rotate(315)" >    
     <use xlink:href="#arrow_line" style="visibility:visible" />
     <use xlink:href="#arrow_head" style="visibility:visible" />
     <use xlink:href="#arrow_head" style="visibility:visible" transform="translate(10,92) rotate(180)"/>
+    
+    <text x="45" y="0" class="Relationship" onclick="alert('Relationship 8')">
+      <textPath xlink:href="#ArrowPath">Relationship 8</textPath>
+    </text>
 
 </g>
      
 <!-- Node: Center -->
 <g id="pattern_0-node" style="visibility:visible">
     <circle cx="100" cy="100" r="50" class="Node" />
+    <text x="100" y="105"  class="Node" onclick="alert('Node 0')">Node 0</text>
 </g>
+</g> 
+<!-- ################################# pattern_0_1 ########################################### -->   
 
-</symbol>
+
  
-<!-- //// pattern_0 ////////////////////////////////////////////////////////////////////////////// -->
-
-
-</defs>
-  
-<g id="graph" transform="translate(0,0) scale(2)">
-   
-   <g id="pattern_0_1" transform="translate(0,0)">   
-      <use xlink:href="#pattern_0"  />
-      <text x="100" y="105"  style="fill: #000000; stroke: none; font-size: 16px; text-anchor: middle">Node 1</text>
-   </g> 
- 
-     
+<!-- end of main group  -->     
 </g>
    
    
